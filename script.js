@@ -69,7 +69,6 @@ function processCommand(command) {
     }
 }
 
-// Text-to-Speech (Specific Female Voice)
 function speakOutput(text) {
     const synth = window.speechSynthesis;
     const utterThis = new SpeechSynthesisUtterance(text);
@@ -77,10 +76,13 @@ function speakOutput(text) {
     // Load the voices
     window.speechSynthesis.onvoiceschanged = function() {
         const voices = synth.getVoices(); // Get the available voices
-        const femaleVoices = voices.filter(voice => voice.name.toLowerCase().includes('female')); // Find female voices
-        const selectedVoice = femaleVoices.length > 0 ? femaleVoices[0] : voices[0]; // Use first female voice or default to the first voice
+        
+        // Find a specific female voice (e.g., "Google US English" or any other desired voice)
+        const selectedVoice = voices.find(voice => 
+            voice.name.includes('Google US English') // Example: specify a particular voice
+        );
 
-        utterThis.voice = selectedVoice; // Set the selected female voice to utterThis
+        utterThis.voice = selectedVoice || voices[0]; // Use selected voice or default to the first voice
         synth.speak(utterThis); // Speak the text
     };
 }
