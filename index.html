@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assista - Enhanced Voice Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="assistant-container">
+        <h1>Assista - Your Voice Assistant</h1>
+        <button id="start-btn">Start Listening</button>
+        <div id="output">Say something...</div>
+        <video id="video" width="100%" height="auto" autoplay></video>
+        <canvas id="canvas" style="display: none;"></canvas>
+
+        <div id="command-list">
+            <h2>Available Commands:</h2>
+            <ul>
+                <li><i class="fas fa-play"></i> "Play" - Play a song on YouTube</li>
+                <li><i class="fas fa-camera"></i> "Capture" - Captures an image from the webcam</li>
+                <li><i class="fas fa-clock"></i> "Time" - Tells the current time</li>
+                <li><i class="fas fa-calendar"></i> "Date" - Tells today's date</li>
+                <li><i class="fas fa-laugh"></i> "Joke" - Tells a joke</li>
+                <li><i class="fas fa-search"></i> "Search" - Search in Google</li>
+                <li><i class="fas fa-sun"></i> "Weather" - Shows current weather</li>
+                <li><i class="fas fa-info-circle"></i> "Fun fact" - Fetches a random fun fact</li>
+                <li><i class="fas fa-newspaper"></i> "News" - Shows the latest news headlines</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

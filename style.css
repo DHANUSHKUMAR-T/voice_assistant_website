@@ -1,0 +1,80 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#assistant-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#output {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#command-list {
+    margin-top: 20px;
+}
+
+#command-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#command-list li {
+    padding: 10px;
+    background-color: #e9ecef;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+    button {
+        padding: 12px;
+    }
+    #output {
+        font-size: 16px;
+    }
+    #command-list li {
+        font-size: 14px;
+    }
+}
